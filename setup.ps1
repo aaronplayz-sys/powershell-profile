@@ -1,3 +1,11 @@
+$MinimumVersion = [Version]"7.4.2"
+$PSVersion = $PSVersionTable.PSVersion
+
+if ($PSVersion -lt $MinimumVersion) {
+    Write-Host "Please install Powershell the latest version, cannot continue"
+    exit
+}
+
 # Ensure the script can run with elevated privileges
 if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     Write-Warning "Please run this script as an Administrator!"
