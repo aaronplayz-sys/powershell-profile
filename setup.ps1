@@ -3,7 +3,7 @@ $PSVersion = $PSVersionTable.PSVersion
 
 if ($PSVersion -lt $MinimumVersion) {
     Write-Host "Please install Powershell the latest version, cannot continue"
-    exit
+    break
 }
 
 # Ensure the script can run with elevated privileges
