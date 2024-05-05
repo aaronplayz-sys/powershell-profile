@@ -2,7 +2,7 @@ $MinimumVersion = [Version]"7.4.2"
 $PSVersion = $PSVersionTable.PSVersion
 
 if ($PSVersion -lt $MinimumVersion) {
-    Write-Host "Please install Powershell the latest version, cannot continue"
+    Write-Host "Please install the Powershell the latest version... Versions below 7.4.2 can not execute this script"
     break
 }
 
